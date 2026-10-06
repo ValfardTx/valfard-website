@@ -394,7 +394,7 @@
     display:flex;align-items:center;gap:10px;border:1px solid var(--panel-border);border-radius:100px;
     padding:11px 20px;font-size:0.92rem;background:var(--panel);
   }
-  .copy-chip button{background:none;border:0;color:var(--purple-300);font-size:0.8rem;cursor:pointer;font-family:var(--font-body);padding:0;}
+  .copy-chip .chip-addr{color:inherit;text-decoration:none;}.copy-chip .chip-action{color:var(--purple-300);font-size:0.8rem;text-decoration:none;font-family:var(--font-body);}.copy-chip .chip-action:hover,.copy-chip .chip-addr:hover{text-decoration:underline;}
   footer{border-top:1px solid var(--panel-border);padding:28px 0;}
   footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
   footer p{margin:0;font-size:0.82rem;color:var(--ink-faint);}
@@ -1062,8 +1062,8 @@
     <p class="lead reveal">Investors, CRO partners, and clinical collaborators &mdash; we&rsquo;d love to hear from you as we move toward in-vivo proof of concept.</p>
     <div class="contact-row reveal">
       <div class="copy-chip">
-        <span id="emailText">hello@valfardtx.com</span>
-        <button type="button" id="copyEmailBtn">Copy</button>
+        <a href="mailto:hello@valfardtx.com" id="emailText" class="chip-addr">hello@valfardtx.com</a>
+        <a href="mailto:hello@valfardtx.com" class="chip-action">Email</a>
       </div>
       <a href="https://www.linkedin.com/company/valfard-therapeutics" class="btn btn-ghost" target="_blank" rel="noopener">LinkedIn &#8599;</a>
     </div>
@@ -1121,20 +1121,6 @@
     els.forEach(function(el){ if(el.classList.contains('pre')) io.observe(el); });
   }
 
-  // copy email
-  var btn = document.getElementById('copyEmailBtn');
-  if(btn){
-    btn.addEventListener('click', function(){
-      var text = document.getElementById('emailText').textContent;
-      var done = function(){ btn.textContent = 'Copied'; setTimeout(function(){btn.textContent='Copy';}, 1800); };
-      if(navigator.clipboard && navigator.clipboard.writeText){
-        navigator.clipboard.writeText(text).then(done).catch(function(){
-          var range = document.createRange(); range.selectNode(document.getElementById('emailText'));
-          window.getSelection().removeAllRanges(); window.getSelection().addRange(range);
-        });
-      }
-    });
-  }
 })();
 
 // ---- hero video: pause when off-screen or tab hidden, to save resources ----
