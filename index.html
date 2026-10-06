@@ -122,6 +122,8 @@
   .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(138,85,201,0.48);}
   .btn-ghost{border:1px solid var(--panel-border);color:var(--ink);}
   .btn-ghost:hover{border-color:var(--purple-400);background:rgba(160,110,220,0.08);}
+  .btn-purple{color:var(--purple-300);border-color:rgba(163,116,219,0.45);}
+  .btn-purple:hover{color:var(--purple-100);border-color:var(--purple-300);background:rgba(160,110,220,0.14);}
 
   /* ---------- hero ---------- */
   .hero{
@@ -390,16 +392,11 @@
   .contact .wrap{position:relative;z-index:1;}
   .contact h2{font-size:clamp(2rem,4.4vw,3rem);max-width:16ch;}
   .contact-row{display:flex;gap:16px;flex-wrap:wrap;margin-top:34px;align-items:center;}
-  .copy-chip{
-    display:flex;align-items:center;gap:10px;border:1px solid var(--panel-border);border-radius:100px;
-    padding:11px 20px;font-size:0.92rem;background:var(--panel);
-  }
-  .copy-chip .chip-addr{color:inherit;text-decoration:none;}.copy-chip .chip-action{color:var(--purple-300);font-size:0.8rem;text-decoration:none;font-family:var(--font-body);}.copy-chip .chip-action:hover,.copy-chip .chip-addr:hover{text-decoration:underline;}
   footer{border-top:1px solid var(--panel-border);padding:28px 0;}
   footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
   footer p{margin:0;font-size:0.82rem;color:var(--ink-faint);}
-  footer a{font-size:0.82rem;color:var(--ink-faint);text-decoration:none;}
-  footer a:hover{color:var(--purple-300);}
+  footer a{font-size:0.82rem;color:var(--purple-300);text-decoration:none;}
+  footer a:hover{color:var(--purple-100);}
 </style>
 
 <header class="nav" id="siteNav">
@@ -1061,11 +1058,8 @@
     <h2 class="reveal">Let&rsquo;s heal what<br>current care can&rsquo;t.</h2>
     <p class="lead reveal">Investors, CRO partners, and clinical collaborators &mdash; we&rsquo;d love to hear from you as we move toward in-vivo proof of concept.</p>
     <div class="contact-row reveal">
-      <div class="copy-chip">
-        <a href="mailto:hello@valfardtx.com" id="emailText" class="chip-addr">hello@valfardtx.com</a>
-        <a href="mailto:hello@valfardtx.com" class="chip-action">Email</a>
-      </div>
-      <a href="https://www.linkedin.com/company/valfard-therapeutics" class="btn btn-ghost" target="_blank" rel="noopener">LinkedIn &#8599;</a>
+      <a href="mailto:hello@valfardtx.com" class="btn btn-ghost btn-purple">Email</a>
+      <a href="https://www.linkedin.com/company/valfard-therapeutics" class="btn btn-ghost btn-purple" target="_blank" rel="noopener">LinkedIn &#8599;</a>
     </div>
   </div>
 </section>
